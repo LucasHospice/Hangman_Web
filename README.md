@@ -1,10 +1,10 @@
-# hagman-Web
+# Hangman-Web
  
-Dans le cadre de notre formation au sein du campus Ynov Lyon, nous avons développé le jeux Hangman a partir d'une librairie de mots et un serveur web golang.
+Dans le cadre de notre formation au sein du campus Ynov Lyon, nous avons développé le jeu Hangman à partir d'une librairie de mots et d'un serveur web golang.
 
 
 ## Pour commencer
-N'hésitez pas a clone le projet.
+N'hésitez pas à clone le projet.
 
 ## Pré-requis
 -Visual Studio Code\
@@ -12,9 +12,9 @@ N'hésitez pas a clone le projet.
 
 
 ## Démarage
-Une fois les prérequis installer et le projet cloner:\
+Une fois les prérequis installés et le projet cloné:\
 -Lancer le serveur Golang \
--Aller sur votre navigateur et retrouver le Hangman grace a :
+-Aller sur votre navigateur et retrouver le Hangman via l'URL :
 #### HTTP://localhost:8080
 
 Versions 1.0
