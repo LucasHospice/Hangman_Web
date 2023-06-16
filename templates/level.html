@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Hangman</title>
+    <link rel="icon" href="/static/img/logo.png">
+	<link rel="stylesheet" href="/static/level.css">
+</head>
+<body>
+  <div id="form-wrapper">
+    <form action="/word" method="post" name="formlevel">
+      <h1 id="form-title">Sélectionne une difficulté</h1>
+      <div id="level-slider">
+        <input type="radio" name="level" id="1" value="facile" required>
+        <label for="1" data-level="Facile"></label>
+        <input type="radio" name="level" id="3" value="normal" required checked>
+        <label for="3" data-level="Normal"></label>
+        <input type="radio" name="level" id="5" value="difficile" required>
+        <label for="5" data-level="Difficile"></label>
+        <div id="level-pos"></div>
+      </div>
+      <button type="submit" name="submitlevel">Choisir</button>
+    </form>
+  </div>
+</body>
+</html>

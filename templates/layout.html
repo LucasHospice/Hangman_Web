@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Hangman</title>
+    <link rel="icon" href="/static/img/logo.png">
+	<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div id="global">
+        <div id="gauche">
+            <div id="lettres">
+                Liste des lettres utilisées :
+            </div>
+            <div id="use">
+                <div id="stock">
+                    {{range $key, $value := .Valid}}
+                    {{$key}} / 
+                    {{end}}
+                </div>
+            </div>
+            <div id="mot">
+                {{if gt .Attempts 1}}
+                <p>Il vous reste {{.Attempts}} tentatives</p>
+                <p id="mottiret">{{.Word}}</p>
+                {{end}}
+                {{if eq .Attempts 1}}
+                <p>Il vous reste {{.Attempts}} tentative</p>
+                <p id="mottiret">{{.Word}}</p>
+                {{end}}
+            </div>
+            <div id="form">
+                <form method="POST" action="/hangman" autocomplete="off">
+                    <label>Entrer une lettre ou un mot : </label>
+                    <input type="text" name="lettre/mot" autofocus style="border: 2px solid black; border-radius: 6px">
+                    <div id="bouton">
+                        <button class="custom-btn btn-15">Envoyer</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="droite">
+            {{if le .Attempts 9}}
+            <div id="base">    
+            </div>
+            {{end}}
+            {{if le .Attempts 8}}
+            <div id="poutre">
+            </div>
+            {{end}}
+            {{if le .Attempts 7}}
+            <div id="poutre2">
+            </div>
+            {{end}}
+            {{if le .Attempts 6}}
+            <div id="corde">
+            </div>
+            {{end}}
+            {{if le .Attempts 5}}
+            <div id="tete">
+            </div>
+            {{end}}
+            {{if le .Attempts 4}}
+            <div id="corps">
+            </div>
+            {{end}}
+            {{if le .Attempts 3}}
+            <div id="brasgauche">
+            </div>
+            {{end}}
+            {{if le .Attempts 2}}
+            <div id="brasdroit">
+            </div>
+            {{end}}
+            {{if le .Attempts 1}}
+            <div id="jambegauche">
+            </div>
+            {{end}}
+            {{if le .Attempts 0}}
+            <div id="jambedroite">
+            </div>
+            {{end}}
+        </div>
+    </div>
+</body>
+</html>
